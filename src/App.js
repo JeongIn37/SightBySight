@@ -6,7 +6,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p>
-          안녕하세요
+          안녕하세요~ 새 branch입니다
         </p>
       
       </header>
