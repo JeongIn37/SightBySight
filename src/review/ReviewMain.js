@@ -45,7 +45,7 @@ class ReviewMain extends Component{
                 </div>
                 <br/>
                 <div className='ReviewParagraph'>
-                    <p>스파이더 맨 보고 왔습니다. 영화는 재미있는데, 자리가 너무 별로예요.</p>
+                    <p>스파이더 맨 보고 왔습니다. 영화는 재미있는데, 자리가 너무 별로예요. (시력 2.0 2.0 입니다)</p>
                 </div>
                 <br/>
                 <h3>Comments</h3>

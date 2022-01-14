@@ -1,6 +1,9 @@
-import logo from './logo.svg';
 import './App.css';
-import { Review } from './review/index.js'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Review } from './review/index.js';
+import { Home } from './home/index.js';
+import { SignUp } from './signUp/index.js';
+
 
 
 function App() {
@@ -14,7 +17,12 @@ function App() {
       </header>
 
       <div>
-        <Review />
+        <Router>
+          <Routes>
+              <Route exact path='/' element={<Home />}></Route>
+              <Route path='/SignUp' element={<SignUp />} />
+          </Routes>
+        </Router>
       </div>
     </div>
   );
