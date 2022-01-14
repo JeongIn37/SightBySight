@@ -1,0 +1,12 @@
+.myInfo-form{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.myReviewItem{
+    border: 3px solid gray;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 3vw;
+    margin-right: 3vw;
+}
