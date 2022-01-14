@@ -1,61 +1,24 @@
-import React from "react";
-import SwiperCore, { EffectCoverflow, Pagination } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/swiper-bundle.min.css";
-import "swiper/swiper.min.css";
-import "./App.css";
 
-SwiperCore.use([EffectCoverflow, Pagination]);
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import SwiperPage from './pages/SwiperPage.js';
 
-const App = () => {
+function App() {
   return (
+    <>
     <div>
-      <Swiper
-        effect={"coverflow"}
-        grabCursor={true}
-        centeredSlides={true}
-        slidesPerView={"auto"}
-        coverflowEffect={{
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: false,
-        }}
-        pagination={true}  //아래에 현재 슬라이드 이미지 위치 표시하는 인디케이터
-        paginationClickable={true} //인디케이터 클릭
-        className="mySwiper"
-      >
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-1.jpg" alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-2.jpg" alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-3.jpg" alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-4.jpg" alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-5.jpg" alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-6.jpg" alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-7.jpg" alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-8.jpg" alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-9.jpg" alt="" />
-        </SwiperSlide>
-      </Swiper>
+    <Router>
+      <Routes>
+        <Route path='/' element={<SwiperPage/>}></Route>
+      </Routes>
+    </Router>
     </div>
+    <div>
+      <p>여기다 좌석 넣으려고여</p>
+    </div>
+    </>
+    
   );
-};
+}
 
 export default App;
