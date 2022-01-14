@@ -1,9 +1,19 @@
-import React, {Component} from 'react';
+import React, {Component, useState} from 'react';
 import { Router, Routes, Route } from 'react-router-dom';
 import SignUpBtn from './SignUpBtn.js';
 import SignUp from '../signUp/signUp';
+import './home.css';
 
 function Home() {
+
+    const[cursorX, setCursorX] = useState();
+    const[cursorY, setCursorY] = useState();
+  
+    window.addEventListener('mousemove', (e) => {
+      setCursorX(e.pageX)
+      setCursorY(e.pageY)
+    })
+
     return (
         <div className='homepage'>
             <div className='logoImg'>
@@ -24,6 +34,12 @@ function Home() {
 
             
             </div>
+
+            <div className='cursor' style={{
+                    left: cursorX + 'px',
+                    top: cursorY + 'px'
+            }}/>
+
         </div>
     )
 }
