@@ -1,0 +1,40 @@
+.wrapTitle{
+    height: 70px;
+}
+.ReviewTitle{
+    float: left;
+    display: inline-block;
+    text-align: left;
+    height: 50px;
+    margin-left: 3vw;
+}
+
+.ReviewParagraph {
+    text-align: left;
+    border: 2px solid;
+    background-color: white;
+    margin-top: 10px;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 55vh;
+    border-radius: 20px;
+}
+
+.comment{
+    border: 3px solid gray;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 3vw;
+    margin-right: 3vw;
+}
+
+.theaterInfo{
+    float: right;
+    display: inline-block;
+    border: 2px solid;
+    border-radius: 20px;
+    width: 20vw;
+    margin-right: 5vw;
+}
