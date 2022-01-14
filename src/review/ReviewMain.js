@@ -40,8 +40,15 @@ class ReviewMain extends Component{
         return (
             <div className='ReviewMain'>
                 <br/>
-                <div className='ReviewTitle'>
-                    <h2>Title Here</h2>
+                <div className='wrapTitle'>
+                    <div className='ReviewTitle'>
+                        <h2>Title Here</h2>
+                        <p>작성자 이름 / 날짜</p>
+                    </div>
+                    <div className='theaterInfo'>
+                        <p>영화관 이름</p>
+                        <p>자리 정보</p>
+                    </div>
                 </div>
                 <br/>
                 <div className='ReviewParagraph'>

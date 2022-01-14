@@ -5,7 +5,7 @@ import { Home } from './home/index.js';
 import { SignUp } from './signUp/index.js';
 import { Header } from './header/index.js';
 import { Profile } from './profile/index.js';
-
+import { WriteReview } from './review/index.js'
 
 
 function App() {
@@ -20,6 +20,8 @@ function App() {
               <Route exact path='/' element={<Home />}></Route>
               <Route path='/SignUp' element={<SignUp />}></Route>
               <Route path='/MyPage' element={<Profile />}></Route>
+              <Route path='/ReadReview' element={<Review />}></Route>
+              <Route path='/WriteReview' element={<WriteReview />}></Route>
           </Routes>
         </Router>
       </div>

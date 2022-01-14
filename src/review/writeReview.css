@@ -1,0 +1,37 @@
+.titleWrap{
+    display: inline-block;
+    float: left;
+    margin-left: 5vw;
+    vertical-align: middle;
+}
+.WriteReviewTitle{
+    text-align: left;
+    height: 50px;
+    width: 50vw;
+    border: 2px solid;
+    border-radius: 20px;
+    
+}
+
+.theaterInfo{
+    float: right;
+    display: inline-block;
+    border: 2px solid;
+    border-radius: 20px;
+    width: 20vw;
+    margin-right: 5vw;
+}
+
+.ReviewWritingArea {
+    text-align: left;
+    border: 2px solid;
+    background-color: white;
+    margin-top: 10px;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 55vh;
+    width: 90vw;
+    border-radius: 20px;
+}
