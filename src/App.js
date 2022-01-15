@@ -13,22 +13,19 @@ import SwiperPage from './pages/SwiperPage.js';
 function App() {
   return (
     <div className="App">
-      <div>
-        <Router>
-          <div className='headerMain'>
-            <Header />
-          </div>
-          <Routes>
-              <Route exact path='/' element={<Home />}></Route>
-              <Route path='/SignUp' element={<SignUp />}></Route>
-              <Route path='/MyPage' element={<Profile />}></Route>
-              <Route path='/ReadReview' element={<Review />}></Route>
-              <Route path='/WriteReview' element={<WriteReview />}></Route>
-              <Route path='/Seats' element={<SwiperPage/>}></Route>
-          </Routes>
-        </Router>
-      </div>
-
+      <Router>
+        {/*<div className='headerMain'>
+          <Header />
+        </div>*/}
+        <Routes>
+          <Route exact path='/' element={<Home />}></Route>
+          <Route path='/SignUp' element={<SignUp />}></Route>
+          <Route path='/MyPage' element={<Profile />}></Route>
+          <Route path='/ReadReview' element={<Review />}></Route>
+          <Route path='/WriteReview' element={<WriteReview />}></Route>
+          <Route path='/Seats' element={<SwiperPage/>}></Route>
+        </Routes>
+      </Router>
     </div>    
   );
 }

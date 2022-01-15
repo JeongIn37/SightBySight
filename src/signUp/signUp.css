@@ -1,4 +1,35 @@
+.signUpPage{
+    height: 100vh;
+}
+
+.signUpTitle{
+    margin-top: 10vh;
+    margin-bottom: 7vh;
+}
+
 .signUp-form{
     margin-left: auto;
     margin-right: auto;
 }
+
+.signupTableItem{
+    padding:10px;
+    height: 35px;
+}
+
+.submitInput{
+    height: 30px;
+    width: 250px;
+}
+
+.checkBtn{
+    height: 30px;
+    width: 100px;
+}
+
+.submitBtn{
+    height: 50px;
+    width: 70px;
+    margin-top: 20px;
+}
+

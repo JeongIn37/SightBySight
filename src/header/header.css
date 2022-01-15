@@ -5,34 +5,28 @@
     padding: 3vh;
 }
 
-.titleBar{
-    height: 15vh;
-}
-
 .title{
+    display: inline-block;
     float: left;
-    height: 10vh;
-    width: 50%;
-    /*margin-left: 3vw;
-    margin-right: 0px;*/
+    width: 40vw;
     margin-right: 0;
     vertical-align: middle;
     text-align: left;
 }
 
 .mypagebtnwrap{
+    display: inline-block;
     float: right;
-    width: 50%;
-    height: 10vh;
+    width: 40vw;
+    vertical-align: middle;
 }
 
 .mypagebtn{
     float: right;
-    vertical-align: middle;
 }
 
 .titletext{
     margin:0;
     text-align: left;
-    width: 800px;
+    color: black;
 }

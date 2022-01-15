@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './writeReview.css';
+import { Header } from '../header/index.js';
 
 class WriteReview extends Component{
     constructor(props){
@@ -10,6 +11,7 @@ class WriteReview extends Component{
         
         return (
             <div className='WriteReviewMain'>
+                <Header />
                 <br/>
                 <div className='titleWrap'>
                     <input type='text' className='WriteReviewTitle' placeholder='제목을 입력해주세요.'/>

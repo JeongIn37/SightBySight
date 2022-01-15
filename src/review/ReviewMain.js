@@ -1,6 +1,7 @@
-import React, {Component} from 'react';
+import React, {Component, useState} from 'react';
 import './reviewMain.css';
 import SingleComment from './SingleComment';
+import { Header } from '../header/index.js';
 
 class ReviewMain extends Component{
     constructor(props){
@@ -39,6 +40,7 @@ class ReviewMain extends Component{
         
         return (
             <div className='ReviewMain'>
+                <Header />
                 <br/>
                 <div className='wrapTitle'>
                     <div className='ReviewTitle'>
@@ -55,11 +57,11 @@ class ReviewMain extends Component{
                     <p>스파이더 맨 보고 왔습니다. 영화는 재미있는데, 자리가 너무 별로예요. (시력 2.0 2.0 입니다)</p>
                 </div>
                 <br/>
-                <h3>Comments</h3>
                 <div className='ReviewComments'>
+                    <h3 className='ReviewCommentsTitle'>Comments</h3>
                     <div>
-                        <div>닉네임</div>
-                        <div id='wirteComment'>
+                        <div className='writeComment'>
+                            <div className='nicknameComment'>닉네임</div>
                             <textarea id='newComment'></textarea>
                             <button id='addComment' onClick={this.addComment}>댓글 등록</button>
                         </div>
