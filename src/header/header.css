@@ -1,7 +1,7 @@
 .header{
     background-color: #6667AB;
     margin-left: 0px;
-    height: 50px;
+    height: 12vh;
     padding: 3vh;
 }
 
@@ -17,6 +17,7 @@
     margin-right: 0px;*/
     margin-right: 0;
     vertical-align: middle;
+    text-align: left;
 }
 
 .mypagebtnwrap{
@@ -33,5 +34,5 @@
 .titletext{
     margin:0;
     text-align: left;
-    
+    width: 800px;
 }

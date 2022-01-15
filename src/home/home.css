@@ -17,8 +17,9 @@
     mix-blend-mode: difference;
 }
 
-body{
+.homepage{
     background-color: black;
+    height: 100vh;
 }
 
 p{
