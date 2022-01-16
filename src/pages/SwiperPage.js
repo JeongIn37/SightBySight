@@ -4,7 +4,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.min.css";
 import "swiper/swiper.min.css";
 import "../css/swiper.css";
-import Header from "../header/Header.js"//
 //import { Link } from 'react-router-dom' //링크로 연결할 떄 사용 예정
 
 import { Paper, Typography } from "@material-ui/core";

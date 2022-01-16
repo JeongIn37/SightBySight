@@ -7,7 +7,7 @@ import { SignUp } from './signUp/index.js';
 import { Header } from './header/index.js';
 import { Profile } from './profile/index.js';
 import { WriteReview } from './review/index.js'
-import SwiperPage from './pages/SwiperPage.js';
+import Seats from './pages/Seats.js';
 
 
 function App() {
@@ -21,9 +21,9 @@ function App() {
           <Route exact path='/' element={<Home />}></Route>
           <Route path='/SignUp' element={<SignUp />}></Route>
           <Route path='/MyPage' element={<Profile />}></Route>
-          <Route path='/ReadReview' element={<Review />}></Route>
+          <Route path='/ReadReview/:no' element={<Review />}></Route>
           <Route path='/WriteReview' element={<WriteReview />}></Route>
-          <Route path='/Seats' element={<SwiperPage/>}></Route>
+          <Route path='/Seats' element={<Seats />}></Route>
         </Routes>
       </Router>
     </div>    

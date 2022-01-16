@@ -18,8 +18,13 @@ function Header() {
                     </Link>
                     
                 </div>
-                <div className='mypagebtnwrap'>
-                    <MyPageBtn />
+                <div className='mybtnwrap'>
+                    <Link to='/MyPage'>
+                        <button className="mybtn">My Page</button>
+                    </Link>
+                    <Link to='/'>
+                        <button className="mybtn">로그아웃</button>
+                    </Link>
                 </div>
             </div>
         </div>

@@ -14,14 +14,14 @@
     text-align: left;
 }
 
-.mypagebtnwrap{
+.mybtnwrap{
     display: inline-block;
     float: right;
     width: 40vw;
     vertical-align: middle;
 }
 
-.mypagebtn{
+.mybtn{
     float: right;
 }
 
