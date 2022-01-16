@@ -28,7 +28,7 @@ class Seats extends Component {
             ]
         }
 
-        this.theaterData = {theaterName: "용산아이맥스", theaterRow: "P", theaterColumn: "10"};
+        this.theaterData = {theaterId: "1", theaterRow: "P", theaterColumn: "10"};
         console.log(this.theaterData.theaterName);
     }
 
@@ -63,7 +63,7 @@ class Seats extends Component {
                 </tbody>
             </table>
             
-            <Link to={'/WriteReview'}>
+            <Link to={`/WriteReview/${this.theaterData.theaterId}/${this.theaterData.theaterRow}/${this.theaterData.theaterColumn}`}>
                 <button>글쓰기</button>
             </Link>
             </div>

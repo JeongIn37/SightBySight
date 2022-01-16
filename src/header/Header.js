@@ -3,7 +3,9 @@ import './header.css';
 import MyPageBtn from './MyPageBtn.js';
 import { Link } from "react-router-dom";
 
-function Header() {
+const Header = () => {
+
+    const nickName = "testnickname"
 
     if(window.location.pathname === '/') {
         return null;
@@ -19,7 +21,7 @@ function Header() {
                     
                 </div>
                 <div className='mybtnwrap'>
-                    <Link to='/MyPage'>
+                    <Link to = {`/MyPage/${nickName}`}>
                         <button className="mybtn">My Page</button>
                     </Link>
                     <Link to='/'>

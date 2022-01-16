@@ -20,9 +20,9 @@ function App() {
         <Routes>
           <Route exact path='/' element={<Home />}></Route>
           <Route path='/SignUp' element={<SignUp />}></Route>
-          <Route path='/MyPage' element={<Profile />}></Route>
-          <Route path='/ReadReview/:no' element={<Review />}></Route>
-          <Route path='/WriteReview' element={<WriteReview />}></Route>
+          <Route path='/MyPage/:nickName' element={<Profile />}></Route>
+          <Route path='/ReadReview/:reviewNo' element={<Review />}></Route>
+          <Route path='/WriteReview/:theaterId/:theaterRow/:theaterColumn' element={<WriteReview />}></Route>
           <Route path='/Seats' element={<Seats />}></Route>
         </Routes>
       </Router>
