@@ -40,6 +40,7 @@ function SwiperPage() {
     console.log(element);
 
     return (
+    <div className="view">
     <div>
         <Swiper
         effect={"coverflow"}
@@ -59,17 +60,17 @@ function SwiperPage() {
         >
         <SwiperSlide>
             <Paper elevation={5} className={classes.paper} id='Yticket' onClick={() => scrollTo(seatArea1)}> 
-                <Typography variant="body1">
-                    <img src="https://swiperjs.com/demos/images/nature-2.jpg" alt="" />
+                <Typography variant="bodyImage">
+                    <img src="img/YImage.jpg" alt="" />
                 </Typography>
                 <Typography variant="h5" color="#FFFFFF" gutterBottom>
-                    용산역아이파크몰
+                    CGV용산아이파크몰<br/>IMAX
                 </Typography>
                 <Typography variant="body1">
-                    주소
+                    주소: 서울특별시 용산구 한강로 3가 40-999 아이파크몰 6층
                 </Typography>
                 <Typography variant="body1">
-                    전화번호
+                    전화번호: 1544-1122 
                 </Typography>
                 <Typography variant="body1">
                     자랑질
@@ -78,17 +79,17 @@ function SwiperPage() {
         </SwiperSlide>
         <SwiperSlide>
         <Paper elevation={5} className={classes.paper} id='Cticket' onClick={() => scrollTo(seatArea2)}> 
-                <Typography variant="body1">
-                    <img src="https://swiperjs.com/demos/images/nature-2.jpg" alt="" />
+                <Typography variant="bodyImage">
+                    <img src="img/CImage.jpg" alt="" />
                 </Typography>
                 <Typography variant="h5" color="#FFFFFF" gutterBottom>
-                    천호
+                    CGV 천호<br/>IMAX
                 </Typography>
                 <Typography variant="body1">
-                    주소
+                    주소: 서울시 강동구 천호동42 홈플러스 4층
                 </Typography>
                 <Typography variant="body1">
-                    전화번호
+                    전화번호: 02-1544-1122
                 </Typography>
                 <Typography variant="body1">
                     자랑질
@@ -97,17 +98,17 @@ function SwiperPage() {
         </SwiperSlide>
         <SwiperSlide>
         <Paper elevation={5} className={classes.paper} id='Wticket' onClick={() => scrollTo(seatArea3)}> 
-                <Typography variant="body1">
-                    <img src="https://swiperjs.com/demos/images/nature-2.jpg" alt="" />
+                <Typography variant="bodyImage">
+                    <img src="img/WImage.jpg" alt="" />
                 </Typography>
                 <Typography variant="h5" color="#FFFFFF" gutterBottom>
-                    왕십리
+                    CGV 왕십리<br/>IMAX
                 </Typography>
                 <Typography variant="body1">
-                    주소
+                    주소: 서울특별시 성동구 행당동 168-1 왕십리 민자역사 5층
                 </Typography>
                 <Typography variant="body1">
-                    전화번호
+                    전화번호: 1544-1122
                 </Typography>
                 <Typography variant="body1">
                     자랑질
@@ -128,6 +129,7 @@ function SwiperPage() {
             <WSeatPage />
         </div>
 
+    </div>
     </div>
     );
 };
