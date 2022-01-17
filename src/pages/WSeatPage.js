@@ -7,6 +7,7 @@ import Select from '@mui/material/Select';
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import "../css/seatreview.css";
+import NativeSelect from '@mui/material/NativeSelect';
 
 
 
@@ -34,16 +35,17 @@ export default function WSeatPage() {
             <Box sx={{ minWidth: 120 }}>
               <FormControl fullWidth>
                 <InputLabel id="demo-simple-select-label">좌석 알파벳</InputLabel>
-                <Select
+                <NativeSelect
                   labelId="SeatAlphabet-label"
                   id="SeatAlphabet-select"
+                  defaultValue={2}
                   value={alphabet}
                   label="SeatAlphabet"
                   onChange={whandleChange}
                 >
-                  <MenuItem value={1}>A</MenuItem>
-                  <MenuItem value={2}>B</MenuItem>
-                  <MenuItem value={3}>C</MenuItem>
+                  <option value={1}>A</option>
+                  <option value={2}>B</option>
+                  <option value={3}>C</option>
                   <MenuItem value={4}>D</MenuItem>
                   <MenuItem value={5}>E</MenuItem>
                   <MenuItem value={6}>F</MenuItem>
@@ -52,7 +54,7 @@ export default function WSeatPage() {
                   <MenuItem value={9}>I</MenuItem>
                   <MenuItem value={10}>J</MenuItem>
                   <MenuItem value={11}>K</MenuItem>
-                </Select>
+                </NativeSelect>
               </FormControl>
             </Box>
           </div>
