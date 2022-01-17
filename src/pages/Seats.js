@@ -38,7 +38,7 @@ const Seats = () => {
         <div>
             <Header />
             <SwiperPage />
-            <div id='seatPage'>
+            {/*<div id='seatPage'>
                 <p>용산 아이맥스</p>
                 <table>
                     <thead>
@@ -65,8 +65,8 @@ const Seats = () => {
                 
                 <Link to={`/WriteReview/${theaterData.theaterId}/${theaterData.theaterRow}/${theaterData.theaterColumn}`}>
                     <button>글쓰기</button>
-                </Link>
-            </div>
+                    </Link>
+            </div>*/}
             
         </div>
     );
