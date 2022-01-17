@@ -28,7 +28,7 @@ export default function WSeatPage() {
   console.log(seatNum);
 
   return (
-<>
+<div className="view">
 <div>
   <Box
       sx={{
@@ -174,7 +174,7 @@ export default function WSeatPage() {
           </div>
         </item>
       </Grid>
-      <Grid item xs={4}>
+      <Grid item xs={2}>
         <item>
           <div>
           <Link to={`/WriteReview/${theaterId}/${alphabet}/${seatNum}`}>
@@ -183,7 +183,16 @@ export default function WSeatPage() {
           </div>
         </item>
       </Grid>
+      <Grid item xs={2}>
+        <item>
+          <div>
+            <Link to={`/WriteReview/${theaterId}/${alphabet}/${seatNum}`}>
+              <Button variant="contained">후기 보기</Button>
+            </Link>
+          </div>
+        </item>
+      </Grid>
     </Grid>
-    </>
+    </div>
   );
 }
