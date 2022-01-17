@@ -5,23 +5,27 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import Grid from '@mui/material/Grid';
-
+import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import "../css/seatreview.css";
+import NativeSelect from '@mui/material/NativeSelect';
 
 
 
 export default function YSeatPage() {
   const [alphabet, setalphabet] = React.useState('');
-  const [seatNum, setNum] = React.useState('');
+  const [seatNum, setSeatNum] = React.useState('');
 
   const handleChange = (event) => {
     setalphabet(event.target.value);
   };
   const handleChange2 = (event) => {
-    setNum(event.target.value);
+    setSeatNum(event.target.value);
   };
 
+  const theaterId = 1;
+  console.log(alphabet);
+  console.log(seatNum);
 
   return (
 <>
@@ -42,22 +46,22 @@ export default function YSeatPage() {
                   label="SeatAlphabet"
                   onChange={handleChange}
                 >
-                  <MenuItem value={1}>A</MenuItem>
-                  <MenuItem value={2}>B</MenuItem>
-                  <MenuItem value={3}>C</MenuItem>
-                  <MenuItem value={4}>D</MenuItem>
-                  <MenuItem value={5}>E</MenuItem>
-                  <MenuItem value={6}>F</MenuItem>
-                  <MenuItem value={7}>G</MenuItem>
-                  <MenuItem value={8}>H</MenuItem>
-                  <MenuItem value={9}>I</MenuItem>
-                  <MenuItem value={10}>J</MenuItem>
-                  <MenuItem value={11}>K</MenuItem>
-                  <MenuItem value={12}>L</MenuItem>
-                  <MenuItem value={13}>M</MenuItem>
-                  <MenuItem value={14}>N</MenuItem>
-                  <MenuItem value={15}>O</MenuItem>
-                  <MenuItem value={16}>P</MenuItem>
+                  <MenuItem value={'A'}>A</MenuItem>
+                  <MenuItem value={'B'}>B</MenuItem>
+                  <MenuItem value={'C'}>C</MenuItem>
+                  <MenuItem value={'D'}>D</MenuItem>
+                  <MenuItem value={'E'}>E</MenuItem>
+                  <MenuItem value={'F'}>F</MenuItem>
+                  <MenuItem value={'G'}>G</MenuItem>
+                  <MenuItem value={'H'}>H</MenuItem>
+                  <MenuItem value={'I'}>I</MenuItem>
+                  <MenuItem value={'J'}>J</MenuItem>
+                  <MenuItem value={'K'}>K</MenuItem>
+                  <MenuItem value={'L'}>L</MenuItem>
+                  <MenuItem value={'M'}>M</MenuItem>
+                  <MenuItem value={'N'}>N</MenuItem>
+                  <MenuItem value={'O'}>O</MenuItem>
+                  <MenuItem value={'P'}>P</MenuItem>
                 </Select>
               </FormControl>
             </Box>
@@ -72,7 +76,7 @@ export default function YSeatPage() {
                 <InputLabel id="demo-simple-select-label">좌석 번호</InputLabel>
                 <Select
                   labelId="demo-simple-select-label"
-                  id="demo-simple-select"
+                  id="SeatNum-select"
                   value={seatNum}
                   label="SeatNum"
                   onChange={handleChange2}
@@ -131,7 +135,9 @@ export default function YSeatPage() {
       <Grid item xs={4}>
         <item>
           <div>
-            <Button variant="contained" href="#outlined-buttons">후기 쓰기</Button>
+            <Link to={`/WriteReview/${theaterId}/${alphabet}/${seatNum}`}>
+              <Button variant="contained">후기 쓰기</Button>
+            </Link>
           </div>
         </item>
       </Grid>

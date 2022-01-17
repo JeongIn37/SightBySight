@@ -7,6 +7,7 @@ import Select from '@mui/material/Select';
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import "../css/seatreview.css";
+import { Link } from 'react-router-dom';
 
 
 
@@ -21,6 +22,9 @@ export default function WSeatPage() {
     setNum(event.target.value);
   };
 
+  const theaterId = 3;
+  console.log(alphabet);
+  console.log(seatNum);
 
   return (
 <>
@@ -41,17 +45,17 @@ export default function WSeatPage() {
                   label="SeatAlphabet"
                   onChange={whandleChange}
                 >
-                  <MenuItem value={1}>A</MenuItem>
-                  <MenuItem value={2}>B</MenuItem>
-                  <MenuItem value={3}>C</MenuItem>
-                  <MenuItem value={4}>D</MenuItem>
-                  <MenuItem value={5}>E</MenuItem>
-                  <MenuItem value={6}>F</MenuItem>
-                  <MenuItem value={7}>G</MenuItem>
-                  <MenuItem value={8}>H</MenuItem>
-                  <MenuItem value={9}>I</MenuItem>
-                  <MenuItem value={10}>J</MenuItem>
-                  <MenuItem value={11}>K</MenuItem>
+                  <MenuItem value={'A'}>A</MenuItem>
+                  <MenuItem value={'B'}>B</MenuItem>
+                  <MenuItem value={'C'}>C</MenuItem>
+                  <MenuItem value={'D'}>D</MenuItem>
+                  <MenuItem value={'E'}>E</MenuItem>
+                  <MenuItem value={'F'}>F</MenuItem>
+                  <MenuItem value={'G'}>G</MenuItem>
+                  <MenuItem value={'H'}>H</MenuItem>
+                  <MenuItem value={'I'}>I</MenuItem>
+                  <MenuItem value={'J'}>J</MenuItem>
+                  <MenuItem value={'K'}>K</MenuItem>
                 </Select>
               </FormControl>
             </Box>
@@ -112,7 +116,9 @@ export default function WSeatPage() {
       <Grid item xs={4}>
         <item>
           <div>
-            <Button variant="contained" href="#outlined-buttons">후기 쓰기</Button>
+          <Link to={`/WriteReview/${theaterId}/${alphabet}/${seatNum}`}>
+              <Button variant="contained">후기 쓰기</Button>
+            </Link>
           </div>
         </item>
       </Grid>
