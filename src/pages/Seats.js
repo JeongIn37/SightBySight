@@ -38,35 +38,6 @@ const Seats = () => {
         <div>
             <Header />
             <SwiperPage />
-            {/*<div id='seatPage'>
-                <p>용산 아이맥스</p>
-                <table>
-                    <thead>
-                        <tr>
-                            <td>글 번호</td>
-                            <td>글 제목</td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {
-                            data.map(item => {
-                                return(
-                                    <tr key={item.id}>
-                                        <td>{ item.id }</td>
-                                        <td>
-                                            <Link to = {`/ReadReview/${item.id}`}>{item.title}</Link>
-                                        </td>
-                                    </tr>
-                                )
-                            })
-                        }        
-                    </tbody>
-                </table>
-                
-                <Link to={`/WriteReview/${theaterData.theaterId}/${theaterData.theaterRow}/${theaterData.theaterColumn}`}>
-                    <button>글쓰기</button>
-                    </Link>
-            </div>*/}
             
         </div>
     );

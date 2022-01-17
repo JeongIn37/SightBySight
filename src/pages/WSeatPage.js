@@ -177,7 +177,7 @@ export default function WSeatPage() {
       <Grid item xs={2}>
         <item>
           <div>
-          <Link to={`/WriteReview/${theaterId}/${alphabet}/${seatNum}`}>
+            <Link to={`/WriteReview/${theaterId}/${alphabet}/${seatNum}`}>
               <Button variant="contained">후기 쓰기</Button>
             </Link>
           </div>
@@ -186,7 +186,7 @@ export default function WSeatPage() {
       <Grid item xs={2}>
         <item>
           <div>
-            <Link to={`/WriteReview/${theaterId}/${alphabet}/${seatNum}`}>
+            <Link to={`/ReviewList/${theaterId}/${alphabet}/${seatNum}`}>
               <Button variant="contained">후기 보기</Button>
             </Link>
           </div>

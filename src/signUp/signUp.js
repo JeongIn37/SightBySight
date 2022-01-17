@@ -1,6 +1,11 @@
 import React, {Component} from 'react';
 import './signUp.css';
 import { Header } from '../header/index.js';
+import axios from 'axios';
+import { Link, Navigate, Redirect, useNavigate } from 'react-router-dom';
+
+const DOMAIN = "http://192.249.18.169:443";
+axios.defaults.withCredentials = true;
 
 const SignUp = () => {
 
@@ -29,6 +34,20 @@ const SignUp = () => {
         else{
             return alert('비밀번호가 일치하지 않습니다.');
         }
+
+        axios.post("http://192.249.18.169:443/user/signup/",{
+            name: userId,
+            password: pw2,
+            nickname: nickName,
+        })
+        .then(function(response) {
+            console.log(response);
+            Navigate("/");
+            
+        })
+        .catch(function(error) {
+            console.log(error);
+        });
     }
 
     return(

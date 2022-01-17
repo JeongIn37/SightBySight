@@ -205,7 +205,7 @@ export default function YSeatPage() {
       <Grid item xs={2}>
         <item>
           <div>
-            <Link to={`/WriteReview/${theaterId}/${alphabet}/${seatNum}`}>
+            <Link to={`/ReviewList/${theaterId}/${alphabet}/${seatNum}`}>
               <Button variant="contained">후기 보기</Button>
             </Link>
           </div>
