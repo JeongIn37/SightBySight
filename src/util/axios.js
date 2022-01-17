@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-cont DOMAIN = "http://localhost:80";
+const DOMAIN = "http://192.249.18.169:443";
 
 axios.defaults.withCredentials = true;
 

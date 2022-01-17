@@ -4,13 +4,10 @@ import './App.css';
 import { Review } from './review/index.js';
 import { Home } from './home/index.js';
 import { SignUp } from './signUp/index.js';
-import { Header } from './header/index.js';
 import { Profile } from './profile/index.js';
 import { WriteReview } from './review/index.js';
-import YSeatPage from './pages/YSeatPage.js';
-import WSeatPage from './pages/WSeatPage.js';
-import CSeatPage from './pages/CSeatPage.js';
 import Seats from './pages/Seats.js';
+import axios from "./util/axios.js";
 
 
 function App() {
@@ -25,9 +22,6 @@ function App() {
               <Route path='/ReadReview/:reviewNo' element={<Review />}></Route>
               <Route path='/WriteReview/:theaterId/:theaterRow/:theaterColumn' element={<WriteReview />}></Route>
               <Route path='/Seats' element={<Seats />}></Route>
-              <Route path='/Y_Seat' element={<YSeatPage/>}></Route>
-              <Route path='/W_Seat' element={<WSeatPage/>}></Route>
-              <Route path='/C_Seat' element={<CSeatPage/>}></Route>
           </Routes>
         </Router>
       </div>
