@@ -29,10 +29,12 @@ const Header = () => {
                     
                 </div>
                 <div className='mybtnwrap'>
+                    
+                    <LogoutIcon fontSize="large" className="mybtn" onClick={logout}/>
                     <Link to = {`/MyPage/${nickName}`}>
-                        <button className="mybtn">My Page</button>
+                        <Avatar className="mybtn1" src="/broken-image.jpg"/>
                     </Link>
-                    <button className="mybtn" onClick={logout}>로그아웃</button>
+                    
                 </div>
             </div>
         </div>
