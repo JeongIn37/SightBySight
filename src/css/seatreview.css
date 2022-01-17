@@ -1,0 +1,24 @@
+.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.MuiSelect-select {
+    height: auto;
+    min-height: 1.4375em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    background-color: white;
+}
+
+.css-mhc70k-MuiGrid-root{
+    padding-top: 30px;
+    padding-left: 100px;
+    background-color: white;
+}
+
+.css-sghohy-MuiButtonBase-root-MuiButton-root{
+    min-width: 300px;
+}
+
+.imgBack{
+    margin-top: 40px;
+    background-color: white;
+}
+
