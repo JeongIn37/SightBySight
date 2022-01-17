@@ -1,12 +1,30 @@
 import React, { useState, useEffect, Component } from "react";
 import { Header } from '../header/index.js';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
+import axios from "axios";
 
 const ReviewList = () => {
 
+    const seat = useParams();
+    console.log(seat);
+
     const [reviewList, setReviewList] = useState([]);
 
-    useEffect(() => {
+    axios.get("http://192.249.18.169:443/reviews/list/")
+        .then((response) => {
+            setReviewList([...response.data]);
+            console.log(response.data);
+        })
+        .catch(function (error) {
+            console.log(error);
+    });
+
+    const showList = () => {
+        
+    }
+
+
+    /*useEffect(() => {
         setReviewList([
             {
                 id: 1,
@@ -26,7 +44,7 @@ const ReviewList = () => {
                 content: "내용 넣기 3번"
             }
         ])
-    }, [ ])
+    }, [ ])*/
 
     return(
         <div id='seatPage'>
@@ -41,14 +59,18 @@ const ReviewList = () => {
                     <tbody>
                         {
                             reviewList.map(item => {
-                                return(
-                                    <tr key={item.id}>
-                                        <td>{ item.id }</td>
-                                        <td>
-                                            <Link to = {`/ReadReview/${item.id}`}>{item.title}</Link>
-                                        </td>
-                                    </tr>
-                                )
+                                if(item.theater == seat.theaterId && item.seatX == seat.theaterRow && item.seatY == seat.theaterColumn)
+                                {
+                                    return(
+                                        <tr key={item.id}>
+                                            <td>{ item.id }</td>
+                                            <td>
+                                                <Link to = {`/ReadReview/${item.id}`}>{item.title}</Link>
+                                            </td>
+                                        </tr>
+                                    )
+                                }
+                                
                             })
                         }        
                     </tbody>

@@ -27,6 +27,7 @@ export default function WSeatPage() {
   console.log(alphabet);
   console.log(seatNum);
 
+
   return (
 <>
 <div>
