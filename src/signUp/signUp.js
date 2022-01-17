@@ -4,7 +4,6 @@ import { Header } from '../header/index.js';
 import axios from 'axios';
 import { Link, Navigate, Redirect, useNavigate } from 'react-router-dom';
 
-const DOMAIN = "http://192.249.18.169:443";
 axios.defaults.withCredentials = true;
 
 const SignUp = () => {
@@ -42,7 +41,7 @@ const SignUp = () => {
         })
         .then(function(response) {
             console.log(response);
-            Navigate("/");
+            
             
         })
         .catch(function(error) {

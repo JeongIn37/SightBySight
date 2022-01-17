@@ -2,6 +2,10 @@ import React, {Component} from 'react';
 import './writeReview.css';
 import { Header } from '../header/index.js';
 import { useParams } from 'react-router-dom';
+import axios from 'axios';
+import { useRadioGroup } from '@mui/material';
+
+axios.defaults.withCredentials = true;
 
 const WriteReview = () => {
 
@@ -20,6 +24,28 @@ const WriteReview = () => {
         }
 
         const data = {reviewTitle: reviewTitle, reviewContents: reviewContents};
+
+        console.log(reviewTitle);
+        console.log(reviewContents);
+        console.log(theater.theaterId);
+        console.log(theater.theaterRow);
+        console.log(theater.theaterColumn);
+
+        axios.post("http://192.249.18.169:443/reviews/posts/",{
+            user_id: 1,
+            title: reviewTitle,
+            content: reviewContents,
+            theater: theater.theaterId,
+            seatX: theater.theaterRow,
+            seatY: theater.theaterColumn,
+            rate: null,
+        })
+        .then(function(response) {
+            console.log(response);
+        })
+        .catch(function(error) {
+            console.log(error.response);
+        });
     }
 
     return(

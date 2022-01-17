@@ -2,14 +2,41 @@ import React, {Component, useState, useEffect} from 'react';
 import './reviewMain.css';
 import SingleComment from './SingleComment';
 import { Header } from '../header/index.js';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
+import axios from "axios";
 
 const ReviewMain = () => {
 
     const reviewId = useParams();
-    console.log(reviewId);
+    //console.log(reviewId);
 
     const [comments, setComments] = useState([]);
+    const [content, setContent] = useState([]);
+
+    axios.get("http://192.249.18.169:443/reviews/list/")
+        .then((response) => {
+            /*if(response.data == reviewId.reviewNo)
+            {
+               
+                
+            }*/
+
+            setContent([...response.data]);
+            //console.log(response.data);
+
+            //console.log(response.data);
+
+            
+
+            //setContent([...response.data]);
+            //console.log(response.data);
+            
+            
+        })
+        .catch(function (error) {
+            console.log(error);
+    });
+
 
     useEffect(() => {
         setComments([
@@ -44,17 +71,56 @@ const ReviewMain = () => {
             <br/>
             <div className='wrapTitle'>
                 <div className='ReviewTitle'>
-                    <h2>Title Here</h2>
-                    <p>작성자 이름 / 날짜</p>
+                    {
+                        content.map(item => {
+                            if(item.id == reviewId.reviewNo)
+                            {
+                                return(
+                                    <div>
+                                        <h2>{ item.title }</h2>
+                                        <p> { item.user_id } / {item.created_at.toString().slice(0,10)}</p>
+                                    </div>
+                                );
+                            }
+                        })
+                        
+                    }
+                    
                 </div>
+
                 <div className='theaterInfo'>
-                    <p>영화관 이름</p>
-                    <p>자리 정보</p>
+                    {
+                        content.map(item => {
+                            if(item.id == reviewId.reviewNo)
+                            {
+                                return(
+                                    <div>
+                                        <p>{ item.theater }</p>
+                                        <p>{item.seatX}행 {item.seatY}열</p>
+                                    </div>
+                                );
+                            }
+                        })
+                    }
+                    
                 </div>
+                
             </div>
             <br/>
             <div className='ReviewParagraph'>
-                <p>스파이더 맨 보고 왔습니다. 영화는 재미있는데, 자리가 너무 별로예요. (시력 2.0 2.0 입니다)</p>
+                    {
+                        content.map(item => {
+                            if(item.id == reviewId.reviewNo)
+                            {
+                                return(
+                                    <div>
+                                        <p>{item.content}</p>
+                                    </div>
+                                );
+                            }
+                        })
+                    }
+                
             </div>
             <br/>
             <div className='ReviewComments'>

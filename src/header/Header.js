@@ -2,6 +2,9 @@ import React from 'react';
 import './header.css';
 import MyPageBtn from './MyPageBtn.js';
 import { Link } from "react-router-dom";
+import Avatar from '@mui/material/Avatar';
+import LogoutIcon from '@mui/icons-material/Logout';
+import { Icon } from '@mui/material';
 
 const Header = () => {
 
@@ -21,11 +24,11 @@ const Header = () => {
                     
                 </div>
                 <div className='mybtnwrap'>
-                    <Link to = {`/MyPage/${nickName}`}>
-                        <button className="mybtn">My Page</button>
-                    </Link>
                     <Link to='/'>
-                        <button className="mybtn">로그아웃</button>
+                        <LogoutIcon fontSize="large" className="mybtn"/>
+                    </Link>
+                    <Link to = {`/MyPage/${nickName}`}>
+                        <Avatar className="mybtn1" src="/broken-image.jpg" />
                     </Link>
                 </div>
             </div>
