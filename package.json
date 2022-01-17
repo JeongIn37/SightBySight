@@ -54,8 +54,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": {
-    "target": "http://192.249.18.169:443",
-    "secure": false
-  }
+  "proxy": "http://192.249.18.169:443"
 }

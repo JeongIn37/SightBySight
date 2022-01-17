@@ -1,6 +1,4 @@
-import React, {Component, useState} from 'react';
-import { Router, Routes, Route } from 'react-router-dom';
-import SignUp from '../signUp/signUp';
+import React, {useState} from 'react';
 import { Link } from "react-router-dom";
 import './home.css';
 import axios from 'axios';
@@ -30,22 +28,26 @@ const Home = () => {
             return alert('비밀번호를 입력해주세요.');
         }
 
-        axios.post("http://192.249.18.169:443/user/api-auth/login/",{
-            username: userId,
+        axios.post("http://192.249.18.169:443/account/login/",{
+            userID: userId,
             password: pw,
         })
         .then(function(response) {
             console.log(response);
-            /*if(response.payload.loginSuccess){
-                //
+
+            if(response.data == 'wrong userID'){
+                return alert("등록되지 않은 아이디입니다.");
+            }
+            else if(response.data == 'wrong password'){
+                return alert("잘못된 비밀번호입니다.");
             }
             else{
-                return alert("로그인 실패!");
-            }*/
-            
+                sessionStorage.setItem('user_id', userId);
+                window.location.href = "/Seats";
+            }
         })
         .catch(function(error) {
-            console.log(error);
+            console.log(error.response);
         });
     }
 
@@ -70,9 +72,8 @@ const Home = () => {
                     </tbody>
                 </table>
                    
-                {/*<Link to='/Seats'>*/}
-                    <button className='loginBtn' onClick={login}>로그인</button>
-                {/*</Link>*/}
+                <button className='loginBtn' onClick={login}>로그인</button>
+
                 <Link to='/SignUp'>
                     <button className='signupBtn'>회원가입</button>
                 </Link>

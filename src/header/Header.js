@@ -1,11 +1,16 @@
 import React from 'react';
 import './header.css';
-import MyPageBtn from './MyPageBtn.js';
 import { Link } from "react-router-dom";
 
 const Header = () => {
 
     const nickName = "testnickname"
+
+    const logout = () => {
+        sessionStorage.removeItem("user_id");
+
+        window.location.href = "/";
+    }
 
     if(window.location.pathname === '/') {
         return null;
@@ -24,9 +29,7 @@ const Header = () => {
                     <Link to = {`/MyPage/${nickName}`}>
                         <button className="mybtn">My Page</button>
                     </Link>
-                    <Link to='/'>
-                        <button className="mybtn">로그아웃</button>
-                    </Link>
+                    <button className="mybtn" onClick={logout}>로그아웃</button>
                 </div>
             </div>
         </div>

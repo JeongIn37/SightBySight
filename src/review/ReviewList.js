@@ -10,18 +10,18 @@ const ReviewList = () => {
 
     const [reviewList, setReviewList] = useState([]);
 
-    axios.get("http://192.249.18.169:443/reviews/list/")
-        .then((response) => {
-            setReviewList([...response.data]);
-            console.log(response.data);
-        })
-        .catch(function (error) {
-            console.log(error);
-    });
+    useEffect(() => {
+        axios.get("http://192.249.18.169:443/reviews/list/")
+            .then((response) => {
+                setReviewList([...response.data]);
+                console.log(response.data);
+            })
+            .catch(function (error) {
+                console.log(error);
+        });
+    }, [ ])
 
-    const showList = () => {
-        
-    }
+
 
 
     /*useEffect(() => {
