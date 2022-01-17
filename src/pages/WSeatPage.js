@@ -7,6 +7,7 @@ import Select from '@mui/material/Select';
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import "../css/seatreview.css";
+import { alpha } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
 
 
@@ -28,6 +29,66 @@ export default function WSeatPage() {
 
   return (
 <>
+<div>
+  <Box
+      sx={{
+        display: 'flex',
+        flexDirection: { xs: 'column', md: 'row' },
+        alignItems: 'center',
+        bgcolor: 'background.paper',
+        overflow: 'hidden',
+        borderRadius: '12px',
+        boxShadow: 1,
+        fontWeight: 'bold',
+      }}
+    >
+      <Box
+        component="img"
+        sx={{
+          height: 233,
+          width: 350,
+          maxHeight: { xs: 233, md: 167 },
+          maxWidth: { xs: 350, md: 250 },
+        }}
+        alt="The house from the offer."
+        src="img/WImage.jpg"
+      />
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: { xs: 'center', md: 'flex-start' },
+          m: 3,
+          minWidth: { md: 350 },
+        }}
+      >
+        <Box component="span" sx={{ color: '#6667AB', fontSize: 25, mt: 1 }}>
+          왕십리 IMAX
+        </Box>
+        <Box component="span" sx={{ fontSize: 22 }}>
+          총 303석
+        </Box>
+        <Box
+          sx={{
+            mt: 1.5,
+            p: 0.5,
+            backgroundColor: (theme) => alpha(theme.palette.primary.main, 0.1),
+            borderRadius: '5px',
+            color: 'primary.main',
+            fontWeight: 'medium',
+            display: 'flex',
+            fontSize: 12,
+            alignItems: 'center',
+            '& svg': {
+              fontSize: 21,
+              mr: 0.5,
+            },
+          }}
+        >
+        </Box>
+      </Box>
+    </Box>
+  </div>
   <div className='imgBack'>
     <img src={'img/WSeat.png'} alt="왕십리 좌석" width={1200}/>
   </div>
