@@ -7,7 +7,6 @@ import { SignUp } from './signUp/index.js';
 import { Header } from './header/index.js';
 import { Profile } from './profile/index.js';
 import { WriteReview } from './review/index.js';
-import YongSanSeatPage from './pages/YongSanSeatPage.js';
 import YSeatPage from './pages/YSeatPage.js';
 import WSeatPage from './pages/WSeatPage.js';
 import CSeatPage from './pages/CSeatPage.js';
@@ -19,9 +18,6 @@ function App() {
     <div className="App">
       <div>
         <Router>
-          <div className='headerMain'>
-            <Header />
-          </div>
           <Routes>
               <Route exact path='/' element={<Home />}></Route>
               <Route path='/SignUp' element={<SignUp />}></Route>
@@ -29,7 +25,6 @@ function App() {
               <Route path='/ReadReview/:reviewNo' element={<Review />}></Route>
               <Route path='/WriteReview/:theaterId/:theaterRow/:theaterColumn' element={<WriteReview />}></Route>
               <Route path='/Seats' element={<Seats />}></Route>
-              <Route path='/YongsanSeat' element={<YongSanSeatPage/>}></Route>
               <Route path='/Y_Seat' element={<YSeatPage/>}></Route>
               <Route path='/W_Seat' element={<WSeatPage/>}></Route>
               <Route path='/C_Seat' element={<CSeatPage/>}></Route>
