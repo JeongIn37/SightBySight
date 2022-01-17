@@ -17,10 +17,37 @@
     mix-blend-mode: difference;
 }
 
-body{
+.homepage{
     background-color: black;
+    height: 100vh;
 }
 
-p{
+.loginTable{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+.tableItem{
+    padding: 10px;
+}
+
+.homeText{
+    display: inline-block;
     color: white;
+}
+
+.loginBtn{
+    margin-right: 10px;
+    margin-left: 10px;
+    width: 5vw;
+    height: 5vh;
+}
+
+.signupBtn{
+    margin-right: 10px;
+    margin-right: 10px;
+    width: 5vw;
+    height: 5vh;
 }

@@ -1,12 +1,25 @@
+.profileTitle{
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+}
+
+.profileTableItem{
+    padding: 10px;
+}
+
 .myInfo-form{
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 5vh;
 }
 
 .myReviewItem{
     border: 3px solid gray;
-    margin-top: 2px;
-    margin-bottom: 2px;
-    margin-left: 3vw;
-    margin-right: 3vw;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    /*margin-left: 3vw;
+    margin-right: 3vw;*/
+    width: 80vw;
 }

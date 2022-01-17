@@ -1,37 +1,32 @@
 .header{
     background-color: #6667AB;
     margin-left: 0px;
-    height: 50px;
+    height: 12vh;
     padding: 3vh;
 }
 
-.titleBar{
-    height: 15vh;
-}
-
 .title{
+    display: inline-block;
     float: left;
-    height: 10vh;
-    width: 50%;
-    /*margin-left: 3vw;
-    margin-right: 0px;*/
+    width: 40vw;
     margin-right: 0;
     vertical-align: middle;
+    text-align: left;
 }
 
-.mypagebtnwrap{
+.mybtnwrap{
+    display: inline-block;
     float: right;
-    width: 50%;
-    height: 10vh;
-}
-
-.mypagebtn{
-    float: right;
+    width: 40vw;
     vertical-align: middle;
+}
+
+.mybtn{
+    float: right;
 }
 
 .titletext{
     margin:0;
     text-align: left;
-    
+    color: black;
 }
