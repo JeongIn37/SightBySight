@@ -26,8 +26,6 @@ const Profile = (props) => {
 
     console.log(myReviewList);
 
-    //const l = myReviewList.map((test)=> (<li>{test.reviewTitle}</li>));
-
     return (
         <div>
             <Header />

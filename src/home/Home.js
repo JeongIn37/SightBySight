@@ -1,8 +1,7 @@
 import React, {Component, useState} from 'react';
 import { Router, Routes, Route } from 'react-router-dom';
-import SignUpBtn from './SignUpBtn.js';
-import LogInBtn from './LogInBtn.js';
 import SignUp from '../signUp/signUp';
+import { Link } from "react-router-dom";
 import './home.css';
 
 function Home() {
@@ -34,8 +33,12 @@ function Home() {
                     </tbody>
                 </table>
                    
-                <LogInBtn />
-                <SignUpBtn />
+                <Link to='/Seats'>
+                    <button className='loginBtn'>로그인</button>
+                </Link>
+                <Link to='/SignUp'>
+                    <button className='signupBtn'>회원가입</button>
+                </Link>
 
             
             </div>
