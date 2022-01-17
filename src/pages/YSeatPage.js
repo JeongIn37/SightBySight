@@ -30,102 +30,103 @@ export default function YSeatPage() {
   return (
   <div className="view"> 
   <div>
-  <Box
-      sx={{
-        display: 'flex',
-        flexDirection: { xs: 'column', md: 'row' },
-        alignItems: 'center',
-        bgcolor: 'background.paper',
-        overflow: 'hidden',
-        borderRadius: '12px',
-        boxShadow: 1,
-        fontWeight: 'bold',
-      }}
-    >
-      <Box
-        component="img"
-        sx={{
-          height: 233,
-          width: 350,
-          maxHeight: { xs: 233, md: 167 },
-          maxWidth: { xs: 350, md: 250 },
-        }}
-        alt="The house from the offer."
-        src="img/YImage.jpg"
-      />
-      <Box
+    <Box
         sx={{
           display: 'flex',
-          flexDirection: 'column',
-          alignItems: { xs: 'center', md: 'flex-start' },
-          m: 3,
-          minWidth: { md: 350 },
+          flexDirection: { xs: 'column', md: 'row' },
+          alignItems: 'center',
+          bgcolor: 'background.paper',
+          overflow: 'hidden',
+          borderRadius: '12px',
+          boxShadow: 1,
+          fontWeight: 'bold',
         }}
       >
-        <Box component="span" sx={{ color: '#6667AB', fontSize: 25, mt: 1 }}>
-          CGV 용산역아이파크몰 IMAX
-        </Box>
-        <Box component="span" sx={{ fontSize: 22 }}>
-          총 624석
-        </Box>
+        <Box
+          component="img"
+          sx={{
+            height: 233,
+            width: 350,
+            maxHeight: { xs: 233, md: 167 },
+            maxWidth: { xs: 350, md: 250 },
+          }}
+          alt="The house from the offer."
+          src="img/YImage.jpg"
+        />
         <Box
           sx={{
-            mt: 1.5,
-            p: 0.5,
-            backgroundColor: (theme) => alpha(theme.palette.primary.main, 0.1),
-            borderRadius: '5px',
-            color: 'primary.main',
-            fontWeight: 'medium',
             display: 'flex',
-            fontSize: 12,
-            alignItems: 'center',
-            '& svg': {
-              fontSize: 21,
-              mr: 0.5,
-            },
+            flexDirection: 'column',
+            alignItems: { xs: 'center', md: 'flex-start' },
+            m: 3,
+            minWidth: { md: 350 },
           }}
         >
+          <Box component="span" sx={{ color: '#6667AB', fontSize: 25, mt: 1 }}>
+            CGV 용산역아이파크몰 IMAX
+          </Box>
+          <Box component="span" sx={{ fontSize: 22 }}>
+            총 624석
+          </Box>
+          <Box
+            sx={{
+              mt: 1.5,
+              p: 0.5,
+              backgroundColor: (theme) => alpha(theme.palette.primary.main, 0.1),
+              borderRadius: '5px',
+              color: 'primary.main',
+              fontWeight: 'medium',
+              display: 'flex',
+              fontSize: 12,
+              alignItems: 'center',
+              '& svg': {
+                fontSize: 21,
+                mr: 0.5,
+              },
+            }}
+          >
+          </Box>
         </Box>
-      </Box>
     </Box>
   </div>
 
   <div className='imgBack'>
     <img src={'img/YongSanSeat.png'} alt="용산역 좌석" width={1200}/>
   </div>
-    <Grid container spacing={2}>
-      <Grid item xs={4}>
-        <item>
-          <div>
-            <Box sx={{ minWidth: 120 }}>
-              <FormControl fullWidth>
-                <InputLabel id="demo-simple-select-label">좌석 알파벳</InputLabel>
-                <Select
+  <div>
+  <Grid container spacing={2}>
+    <Grid item xs={4}>
+      <item>
+        <div>
+          <Box sx={{ minWidth: 120 }}>
+            <FormControl fullWidth>
+              <InputLabel id="demo-simple-select-label">좌석 알파벳</InputLabel>
+              <Select
                   labelId="SeatAlphabet-label"
                   id="SeatAlphabet-select"
                   value={alphabet}
                   label="SeatAlphabet"
                   onChange={handleChange}
-                >
-                  <MenuItem value={'A'}>A</MenuItem>
-                  <MenuItem value={'B'}>B</MenuItem>
-                  <MenuItem value={'C'}>C</MenuItem>
-                  <MenuItem value={'D'}>D</MenuItem>
-                  <MenuItem value={'E'}>E</MenuItem>
-                  <MenuItem value={'F'}>F</MenuItem>
-                  <MenuItem value={'G'}>G</MenuItem>
-                  <MenuItem value={'H'}>H</MenuItem>
-                  <MenuItem value={'I'}>I</MenuItem>
-                  <MenuItem value={'J'}>J</MenuItem>
-                  <MenuItem value={'K'}>K</MenuItem>
-                  <MenuItem value={'L'}>L</MenuItem>
-                  <MenuItem value={'M'}>M</MenuItem>
-                  <MenuItem value={'N'}>N</MenuItem>
-                  <MenuItem value={'O'}>O</MenuItem>
-                  <MenuItem value={'P'}>P</MenuItem>
-                </Select>
-              </FormControl>
-            </Box>
+              >
+                <MenuItem value={'A'}>A</MenuItem>
+                <MenuItem value={'B'}>B</MenuItem>
+                <MenuItem value={'C'}>C</MenuItem>
+                <MenuItem value={'D'}>D</MenuItem>
+                <MenuItem value={'E'}>E</MenuItem>
+                <MenuItem value={'F'}>F</MenuItem>
+                <MenuItem value={'G'}>G</MenuItem>
+                <MenuItem value={'H'}>H</MenuItem>
+                <MenuItem value={'I'}>I</MenuItem>
+                <MenuItem value={'J'}>J</MenuItem>
+                <MenuItem value={'K'}>K</MenuItem>
+                <MenuItem value={'L'}>L</MenuItem>
+                <MenuItem value={'M'}>M</MenuItem>
+                <MenuItem value={'N'}>N</MenuItem>
+                <MenuItem value={'O'}>O</MenuItem>
+                <MenuItem value={'P'}>P</MenuItem>
+              </Select>
+            </FormControl>
+          </Box>
           </div>
         </item>
       </Grid>
@@ -193,25 +194,27 @@ export default function YSeatPage() {
           </div>
         </item>
       </Grid>
-      <Grid item xs={2}>
+      <Grid item xs={0}>
         <item>
           <div>
             <Link to={`/WriteReview/${theaterId}/${alphabet}/${seatNum}`}>
-              <Button variant="contained">후기 쓰기</Button>
+              <Button size="large" color="secondary" variant="contained">후기 쓰기</Button>
             </Link>
           </div>
         </item>
       </Grid>
-      <Grid item xs={2}>
+      <Grid item xs={0}>
         <item>
           <div>
             <Link to={`/ReviewList/${theaterId}/${alphabet}/${seatNum}`}>
-              <Button variant="contained">후기 보기</Button>
+              <Button size="large" color="secondary" variant="contained">후기 보기</Button>
             </Link>
           </div>
         </item>
       </Grid>
     </Grid>
     </div>
+    </div>
+    
   );
 }

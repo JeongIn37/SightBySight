@@ -1,6 +1,9 @@
 import React from 'react';
 import './header.css';
 import { Link } from "react-router-dom";
+import Avatar from '@mui/material/Avatar';
+import LogoutIcon from '@mui/icons-material/Logout';
+import { Icon } from '@mui/material';
 
 const Header = () => {
 

@@ -40,6 +40,7 @@ function SwiperPage() {
     console.log(element);
 
     return (
+     
     <div className="view">
     <div>
         <Swiper

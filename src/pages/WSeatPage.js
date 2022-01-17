@@ -29,7 +29,7 @@ export default function WSeatPage() {
 
 
   return (
-<>
+<div className="view">
 <div>
   <Box
       sx={{
@@ -175,25 +175,25 @@ export default function WSeatPage() {
           </div>
         </item>
       </Grid>
-      <Grid item xs={2}>
+      <Grid item xs={0}>
         <item>
           <div>
             <Link to={`/WriteReview/${theaterId}/${alphabet}/${seatNum}`}>
-              <Button variant="contained">후기 쓰기</Button>
+              <Button size="large" color="secondary" variant="contained">후기 쓰기</Button>
             </Link>
           </div>
         </item>
       </Grid>
-      <Grid item xs={2}>
+      <Grid item xs={0}>
         <item>
           <div>
             <Link to={`/ReviewList/${theaterId}/${alphabet}/${seatNum}`}>
-              <Button variant="contained">후기 보기</Button>
+              <Button size="large" color="secondary" variant="contained">후기 보기</Button>
             </Link>
           </div>
         </item>
       </Grid>
     </Grid>
-    </>
+    </div>
   );
 }
