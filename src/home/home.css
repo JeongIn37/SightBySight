@@ -8,17 +8,18 @@
 }
 
 .cursor{
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
     background-color: white;
     position: fixed;
     border-radius: 50%;
     pointer-events: none;
     mix-blend-mode: difference;
+    color:white;
 }
 
 .homepage{
-    background-color: black;
+    background-color: #6667AB;;
     height: 100vh;
 }
 
@@ -36,18 +37,41 @@
 .homeText{
     display: inline-block;
     color: white;
+    font-family: 'Bebas Neue', cursive;
+    font-size:50px;
 }
 
 .loginBtn{
+    color: white;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 50px;
     margin-right: 10px;
     margin-left: 10px;
     width: 5vw;
     height: 5vh;
+    margin: auto;
+    margin-bottom: 8px;
 }
 
 .signupBtn{
+    font-family: 'Bebas Neue', cursive;
+    color:white;
+    font-size: 50px;
     margin-right: 10px;
-    margin-right: 10px;
-    width: 5vw;
-    height: 5vh;
+    margin: auto;
+}
+
+.titlefont{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 90px;
+    padding-top: 400px;
+}
+
+.login{
+    position: absolute;
+    margin: auto;
+    align-items: center;
+    margin-left: 40%;
+    margin-top: 20%;
+
 }

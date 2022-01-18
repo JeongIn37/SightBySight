@@ -1,6 +1,7 @@
-import React, {useState} from 'react';
+import React, {useState,useRef} from 'react';
 import { Link } from "react-router-dom";
 import './home.css';
+import Login from './Login.js';
 import axios from 'axios';
 
 
@@ -10,6 +11,15 @@ axios.defaults.xsrfHeaderName = 'X-CSRFToken';
 
 const Home = () => {
 
+    const seatArea1 = useRef(null);
+
+    const scrollTo = (ref) => {
+        window.scroll({
+            top: ref.current.offsetTop,
+            behavior: "smooth",
+        });
+    }
+
     const[cursorX, setCursorX] = useState();
     const[cursorY, setCursorY] = useState();
   
@@ -18,68 +28,11 @@ const Home = () => {
       setCursorY(e.pageY)
     })
 
-    const login = () => {
-        const userId = document.getElementsByName('id')[0].value.trim();
-        const pw = document.getElementsByName('password')[0].value.trim();
-
-        if(userId === ""){
-            return alert('아이디를 입력해주세요.');
-        }
-        else if(pw === ""){
-            return alert('비밀번호를 입력해주세요.');
-        }
-
-        axios.post("http://192.249.18.169:443/account/login/",{
-            userID: userId,
-            password: pw,
-        })
-        .then(function(response) {
-            console.log(response);
-
-            if(response.data == 'wrong userID'){
-                return alert("등록되지 않은 아이디입니다.");
-            }
-            else if(response.data == 'wrong password'){
-                return alert("잘못된 비밀번호입니다.");
-            }
-            else{
-                sessionStorage.setItem('user_id', userId);
-                window.location.href = "/Seats";
-            }
-        })
-        .catch(function(error) {
-            console.log(error.response);
-        });
-    }
-
-
-
     return (
-        <div className='homepage'>
+        <div>
+        <div className='homepage' onClick={() => scrollTo(seatArea1)}>
             <div className='logoImg'>
-                <h1>로고 이미지 넣을 곳</h1>
-            </div>
-            <div className='login'>
-                <table className='loginTable'>
-                    <tbody>
-                        <tr>
-                            <td className='tableItem'><p className='homeText'>아이디:</p></td>
-                            <td className='tableItem'><input type="text" name='id' placeholder='아이디를 입력해주세요'/></td>
-                        </tr>
-                        <tr>
-                            <td className='tableItem'><p className='homeText'>비밀번호:</p></td>
-                            <td className='tableItem'><input type="password" name='password' placeholder='비밀번호를 입력해주세요'/></td>
-                        </tr>
-                    </tbody>
-                </table>
-                   
-                <button className='loginBtn' onClick={login}>로그인</button>
-
-                <Link to='/SignUp'>
-                    <button className='signupBtn'>회원가입</button>
-                </Link>
-
-            
+                <h1 className="titlefont">SIGHT BY SIGHT</h1>
             </div>
 
             <div className='cursor' style={{
@@ -87,6 +40,10 @@ const Home = () => {
                     top: cursorY + 'px'
             }}/>
 
+        </div>
+        <div className='LoginPage' ref={seatArea1}>
+        <Login />
+        </div>
         </div>
     )
 }
