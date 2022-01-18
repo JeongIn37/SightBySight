@@ -4,8 +4,25 @@ import './reviewMain.css';
 import { Header } from '../header/index.js';
 import { useParams } from 'react-router-dom';
 import axios from "axios";
+import  Grid  from '@material-ui/core/Grid';
+import {Typography} from '@material-ui/core';
+import {Container} from '@material-ui/core';
+import Card from '@material-ui/core/Card';
+import CardHeader from '@material-ui/core/CardHeader';
+import CardContent from '@material-ui/core/CardContent';
+import { makeStyles } from "@material-ui/core/styles";
+import Box from '@mui/material/Box';
+import { alpha } from '@mui/material/styles';
+
+const useStyles = makeStyles({
+    cardBack: {
+        backgroundColor: '#6667AB',
+    }, 
+});
 
 const ReviewMain = () => {
+
+    const classes = useStyles();
 
     const reviewId = useParams();
     //console.log(reviewId);
@@ -61,7 +78,7 @@ const ReviewMain = () => {
             <br/>
             <div className='wrapTitle'>
                 <div className='ReviewTitle'>
-                    {
+                    {/*{
                         content.map(item => {
                             if(item.id == reviewId.reviewNo)
                             {
@@ -69,30 +86,56 @@ const ReviewMain = () => {
                                     <div>
                                         <h1 className='reviewTitleText'>{ item.title }</h1>
                                         <br/>
-                                        <p> { item.user_id } / {item.created_at.toString().slice(0,10)}</p>
+                                        <p> 작성자: { item.user_id } / 작성일: {item.created_at.toString().slice(0,10)}</p>
                                     </div>
                                 );
                             }
                         })
                         
-                    }
+                    }*/}
+                    <div>
+                        <h1 className='reviewTitleText'>제목</h1>
+                        <br/>
+                        <p> 작성자: 이름 / 작성일: 2022-01-01</p>
+                    </div>
                     
                 </div>
 
                 <div className='theaterInfo'>
-                    {
+                    {/*{
                         content.map(item => {
                             if(item.id == reviewId.reviewNo)
                             {
                                 return(
-                                    <div>
-                                        <p>{ item.theater }</p>
-                                        <p>{item.seatX}행 {item.seatY}열</p>
-                                    </div>
+                                    <Card elevation={5} className={classes.cardBack}>
+                                        <CardContent>
+                                            <Typography class="bodycolor" variant="body2">
+                                                {item.theater}
+                                            </Typography>
+                                            <Typography class="bodycolor" variant="body2">
+                                                {item.seatX}행 {item.seatY}열
+                                            </Typography>
+                                            
+                                        </CardContent>
+                                    </Card>
                                 );
                             }
                         })
-                    }
+                    }*/}
+
+                    <div>
+                        <Card elevation={5} className={classes.cardBack}>
+                            <CardContent>
+                                <Typography class="bodycolor" variant="body2">
+                                    영화관 이름
+                                </Typography>
+                                <Typography class="bodycolor" variant="body2">
+                                    A행 2열
+                                </Typography>
+                                
+                            </CardContent>
+                        </Card>
+                    </div>
                     
                 </div>
                 

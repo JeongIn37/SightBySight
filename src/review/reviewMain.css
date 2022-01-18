@@ -10,9 +10,17 @@
     
 }
 
+.makeStyles-cardBack-2{
+    height: 70px;
+}
+
+.MuiCardContent-root{
+    padding: 10px !important;
+}
+
 .ReviewParagraph {
     text-align: left;
-    border: 2px solid;
+    border: 1px solid;
     background-color: white;
     margin-top: 10px;
     margin-left: 3vw;

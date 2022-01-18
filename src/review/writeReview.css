@@ -17,6 +17,14 @@
     border-color: #6667AB;
 }
 
+.makeStyles-cardBack-2{
+    height: 70px;
+}
+
+.MuiCardContent-root{
+    padding: 10px !important;
+}
+
 .theaterInfo{
     float: right;
     display: inline-block;
