@@ -27,7 +27,7 @@ Sight by Sight는 영화관 시야 후기를 남길 수 있는 사이트입니�
 
 |회원가입 화면|회원가입 완료|
 |:-:|:-:|
-|![](https://github.com/MIN60/madcamp_week3/blob/master/screenshot/KakaoTalk_20220118_194829034.png)||
+|![](https://github.com/MIN60/madcamp_week3/blob/master/screenshot/KakaoTalk_20220118_194829034.png)|![](https://github.com/MIN60/madcamp_week3/blob/master/screenshot/KakaoTalk_20220118_194901770.png)|
 
 ## 메인화면
 로그인에 성공하면 영화관과 자리를 선택할 수 있는 메인 화면이 보입니다.
@@ -41,7 +41,7 @@ Sight by Sight는 영화관 시야 후기를 남길 수 있는 사이트입니�
 
 |영화관 선택|좌석 선택|
 |:-:|:-:|
-|![]()||
+|![](https://github.com/MIN60/madcamp_week3/blob/master/screenshot/KakaoTalk_20220118_194943370.png)|![](https://github.com/MIN60/madcamp_week3/blob/master/screenshot/KakaoTalk_20220118_195001235.png)|
 
 ## 후기쓰기
 메인 화면에서 좌석 선택 후 후기쓰기 버튼 클릭 시 후기를 작성할 수 있는 화면으로 이동합니다.
@@ -51,7 +51,7 @@ Sight by Sight는 영화관 시야 후기를 남길 수 있는 사이트입니�
 
 |후기쓰기 화면|
 |:-:|
-||
+|![](https://github.com/MIN60/madcamp_week3/blob/master/screenshot/KakaoTalk_20220118_195113454.png)|
 
 ## 후기 보기
 메인 화면에서 좌석 선택 후 후기보기 버튼 클릭 시 해당 좌석의 후기 목록을 볼 수 있는 화면으로 이동합니다.
@@ -61,15 +61,14 @@ Sight by Sight는 영화관 시야 후기를 남길 수 있는 사이트입니�
 
 |후기 리스트|후기 상세정보|
 |:-:|:-:|
-|||
+|![](https://github.com/MIN60/madcamp_week3/blob/master/screenshot/KakaoTalk_20220118_195140919.png)|![](https://github.com/MIN60/madcamp_week3/blob/master/screenshot/KakaoTalk_20220118_195433074.png)|
 
 ## 상단 Header 및 마이페이지
 홈 화면을 제외한 모든 화면의 상단에 Header가 위치합니다. Header 중앙의 사이트 이름을 클릭하면 메인화면으로 이동이 가능합니다. Header 우측에는 MY PAGE와 LOGOUT 버튼이 있고, MY PAGE버튼 클릭 시 나의 아이디와 닉네임, 작성한 후기 리스트를 볼 수 있는 화면으로 이동합니다. LOGOUT 버튼 클릭 시 로그아웃이 되며 다시 로그인을 할 수 있는 홈 화면으로 이동하게 됩니다.
 |Header|
 |:-:|
-||
-|마이페이지|
-||
+|![](https://github.com/MIN60/madcamp_week3/blob/master/screenshot/KakaoTalk_20220118_195434798.png)|
+
 
 ## Credit
 - 김민정([MIN60](https://github.com/MIN60))
