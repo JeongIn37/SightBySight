@@ -1,8 +1,8 @@
 import React, {Component, useState, useEffect} from 'react';
 import './reviewMain.css';
-import SingleComment from './SingleComment';
+//import SingleComment from './SingleComment';
 import { Header } from '../header/index.js';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import axios from "axios";
 
 const ReviewMain = () => {
@@ -10,7 +10,7 @@ const ReviewMain = () => {
     const reviewId = useParams();
     //console.log(reviewId);
 
-    const [comments, setComments] = useState([]);
+    //const [comments, setComments] = useState([]);
     const [content, setContent] = useState([]);
 
     useEffect(() => {
@@ -28,7 +28,7 @@ const ReviewMain = () => {
     
 
 
-    useEffect(() => {
+    /*useEffect(() => {
         setComments([
             {
                 uuid: 1,
@@ -53,7 +53,7 @@ const ReviewMain = () => {
             date: new Date().toISOString().slice(0,10),
             content: value
         }]);
-    }
+    }*/
 
     return (
         <div className='ReviewMain'>
@@ -67,7 +67,8 @@ const ReviewMain = () => {
                             {
                                 return(
                                     <div>
-                                        <h2>{ item.title }</h2>
+                                        <h1 className='reviewTitleText'>{ item.title }</h1>
+                                        <br/>
                                         <p> { item.user_id } / {item.created_at.toString().slice(0,10)}</p>
                                     </div>
                                 );
@@ -113,7 +114,7 @@ const ReviewMain = () => {
                 
             </div>
             <br/>
-            <div className='ReviewComments'>
+            {/*<div className='ReviewComments'>
                 <h3 className='ReviewCommentsTitle'>Comments</h3>
                 <div>
                     <div className='writeComment'>
@@ -130,7 +131,7 @@ const ReviewMain = () => {
 
                     </ul>
                 </div>
-            </div>
+                    </div>*/}
         </div>
     );
 };

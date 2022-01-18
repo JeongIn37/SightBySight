@@ -8,7 +8,6 @@ import { Profile } from './profile/index.js';
 import { WriteReview } from './review/index.js';
 import { ReviewList } from './review/index.js';
 import Seats from './pages/Seats.js';
-import axios from "./util/axios.js";
 
 
 function App() {

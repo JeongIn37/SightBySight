@@ -1,8 +1,7 @@
-import React, {Component} from 'react';
+import React from 'react';
 import './signUp.css';
 import { Header } from '../header/index.js';
 import axios from 'axios';
-import { Link, Navigate, Redirect, useNavigate } from 'react-router-dom';
 
 axios.defaults.withCredentials = true;
 
@@ -28,7 +27,6 @@ const SignUp = () => {
         }
 
         if(pw1 === pw2){
-            //save
         }
         else{
             return alert('비밀번호가 일치하지 않습니다.');

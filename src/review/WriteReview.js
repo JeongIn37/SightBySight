@@ -1,10 +1,9 @@
-import React, {Component, useEffect, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './writeReview.css';
 import { Header } from '../header/index.js';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import Button from '@mui/material/Button';
-import { useRadioGroup } from '@mui/material';
 
 axios.defaults.withCredentials = true;
 
