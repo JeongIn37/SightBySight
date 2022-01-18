@@ -64,7 +64,7 @@ function SwiperPage() {
                 <Typography variant="bodyImage">
                     <img src="img/YImage.jpg" alt="" />
                 </Typography>
-                <Typography variant="h5" color="#FFFFFF" gutterBottom>
+                <Typography variant="h6" color="#FFFFFF" gutterBottom>
                     CGV용산아이파크몰<br/>IMAX
                 </Typography>
                 <Typography variant="body1">
@@ -83,7 +83,7 @@ function SwiperPage() {
                 <Typography variant="bodyImage">
                     <img src="img/CImage.jpg" alt="" />
                 </Typography>
-                <Typography variant="h5" color="#FFFFFF" gutterBottom>
+                <Typography variant="h6" color="#FFFFFF" gutterBottom>
                     CGV 천호<br/>IMAX
                 </Typography>
                 <Typography variant="body1">
@@ -102,7 +102,7 @@ function SwiperPage() {
                 <Typography variant="bodyImage">
                     <img src="img/WImage.jpg" alt="" />
                 </Typography>
-                <Typography variant="h5" color="#FFFFFF" gutterBottom>
+                <Typography variant="h6" color="#FFFFFF" gutterBottom>
                     CGV 왕십리<br/>IMAX
                 </Typography>
                 <Typography variant="body1">

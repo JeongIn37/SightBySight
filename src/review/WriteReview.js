@@ -1,8 +1,9 @@
-import React, {Component} from 'react';
+import React, {Component, useEffect, useState} from 'react';
 import './writeReview.css';
 import { Header } from '../header/index.js';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import Button from '@mui/material/Button';
 import { useRadioGroup } from '@mui/material';
 
 axios.defaults.withCredentials = true;
@@ -11,6 +12,20 @@ const WriteReview = () => {
 
     const theater = useParams();
     console.log(theater);
+
+    const [theaterInfo, setTheaterInfo] = useState([]);
+
+    useEffect(() => {
+        axios.get("http://192.249.18.169:443/theaters/")
+            .then((response) => {
+
+                setTheaterInfo([...response.data]);
+                console.log(response.data);
+            })
+            .catch(function (error) {
+                console.log(error);
+        });
+    }, [ ])
 
     const submitReview = () => {
         const reviewTitle = document.getElementsByName('reviewTitle')[0].value.trim();
@@ -57,7 +72,13 @@ const WriteReview = () => {
                 <input type='text' className='WriteReviewTitle' name='reviewTitle' placeholder='제목을 입력해주세요.'/>
             </div>
             <div className='theaterInfo'>
-                <p>{theater.theaterId}</p>
+                {
+                    theaterInfo.map(item => {
+                        if(item.id == theater.theaterId){
+                            return(<p>{item.name}</p>)
+                        }
+                    })
+                }
                 <p>{theater.theaterRow}행 {theater.theaterColumn}열</p>
             </div>
             <br/>
@@ -65,7 +86,8 @@ const WriteReview = () => {
                 <textarea className='ReviewWritingArea' name='reviewContents' placeholder='내용을 입력하세요.'></textarea>
             </div>
             <br/>
-            <button id='reveiwSubmit' onClick={submitReview}>등록</button>
+            <Button size="large" color="secondary" variant="contained" onClick={submitReview}>등록</Button>
+            
         </div>
     );
 }
