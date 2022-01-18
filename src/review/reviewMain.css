@@ -6,20 +6,29 @@
     display: inline-block;
     text-align: left;
     height: 50px;
-    margin-left: 3vw;
+    margin-left: 4vw;
+    
+}
+
+.makeStyles-cardBack-2{
+    height: 70px;
+}
+
+.MuiCardContent-root{
+    padding: 10px !important;
 }
 
 .ReviewParagraph {
     text-align: left;
-    border: 2px solid;
+    border: 1px solid;
     background-color: white;
     margin-top: 10px;
     margin-left: 3vw;
     margin-right: 3vw;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 10px;
     height: 55vh;
-    border-radius: 20px;
+    border-radius: 5px;
+    border-color: #6667AB;
 }
 
 .ReviewCommentsTitle{
@@ -47,9 +56,11 @@
     float: right;
     display: inline-block;
     border: 2px solid;
-    border-radius: 20px;
+    border-radius: 5px;
     width: 20vw;
     margin-right: 5vw;
+    border-color: #6667AB;
+    padding: 5px;
 }
 
 #newComment{

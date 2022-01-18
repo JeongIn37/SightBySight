@@ -26,9 +26,10 @@ const Profile = (props) => {
                 reviewTitle: "뒷 줄 별로야"
             },
         ]);*/
-        axios.get("http://192.249.18.169:443/reviews/mypage/")
+        axios.get("http://192.249.18.169:443/reviews/list/")
         .then((response) => {
             setMyReviewList([...response.data]);
+            console.log(response)
         })
         .catch(function (error) {
             console.log(error);
@@ -83,7 +84,7 @@ const Profile = (props) => {
                         </tr>
                     </tbody>
                 </table>
-                </Paper>
+            </Paper>
                 
             </div>
 
@@ -92,8 +93,14 @@ const Profile = (props) => {
                 <div>
                     <ul id='myReviewList'>
                         {
-                            myReviewList.map((review, index) => {
-                                return <SingleReview key={index} review={review}/>
+                            myReviewList.map(review => {
+                                if(review.user_id == user){
+                                    return (
+                                        <div className='review'>
+                                            <div className='myReviewItem'>{review.title}</div>
+                                        </div>
+                                    )
+                                }
                             })
                         }
                     </ul>

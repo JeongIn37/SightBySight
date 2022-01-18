@@ -1,14 +1,30 @@
-import React, {Component, useEffect, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './writeReview.css';
 import { Header } from '../header/index.js';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import Button from '@mui/material/Button';
-import { useRadioGroup } from '@mui/material';
+import  Grid  from '@material-ui/core/Grid';
+import {Typography} from '@material-ui/core';
+import {Container} from '@material-ui/core';
+import Card from '@material-ui/core/Card';
+import CardHeader from '@material-ui/core/CardHeader';
+import CardContent from '@material-ui/core/CardContent';
+import { makeStyles } from "@material-ui/core/styles";
+import Box from '@mui/material/Box';
+import { alpha } from '@mui/material/styles';
 
 axios.defaults.withCredentials = true;
 
+const useStyles = makeStyles({
+    cardBack: {
+        backgroundColor: '#6667AB',
+    }, 
+});
+
 const WriteReview = () => {
+
+    const classes = useStyles();
 
     const theater = useParams();
     console.log(theater);
@@ -75,11 +91,22 @@ const WriteReview = () => {
                 {
                     theaterInfo.map(item => {
                         if(item.id == theater.theaterId){
-                            return(<p>{item.name}</p>)
+                            return(
+                                <Card elevation={5} className={classes.cardBack}>
+                                    <CardContent>
+                                        <Typography class="bodycolor" variant="body2">
+                                            {item.name}
+                                        </Typography>
+                                        <Typography class="bodycolor" variant="body2">
+                                            {theater.theaterRow}행 {theater.theaterColumn}열
+                                        </Typography>
+                                        
+                                    </CardContent>
+                                </Card>
+                            )
                         }
                     })
                 }
-                <p>{theater.theaterRow}행 {theater.theaterColumn}열</p>
             </div>
             <br/>
             <div className='WriteReviewParagraph'>

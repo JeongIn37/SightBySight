@@ -1,17 +1,47 @@
 import React, {Component, useState, useEffect} from 'react';
 import './reviewMain.css';
-import SingleComment from './SingleComment';
+//import SingleComment from './SingleComment';
 import { Header } from '../header/index.js';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import axios from "axios";
+import  Grid  from '@material-ui/core/Grid';
+import {Typography} from '@material-ui/core';
+import {Container} from '@material-ui/core';
+import Card from '@material-ui/core/Card';
+import CardHeader from '@material-ui/core/CardHeader';
+import CardContent from '@material-ui/core/CardContent';
+import { makeStyles } from "@material-ui/core/styles";
+import Box from '@mui/material/Box';
+import { alpha } from '@mui/material/styles';
+
+const useStyles = makeStyles({
+    cardBack: {
+        backgroundColor: '#6667AB',
+    }, 
+});
 
 const ReviewMain = () => {
+
+    const classes = useStyles();
 
     const reviewId = useParams();
     //console.log(reviewId);
 
-    const [comments, setComments] = useState([]);
+    //const [comments, setComments] = useState([]);
     const [content, setContent] = useState([]);
+    const [theaterInfo, setTheaterInfo] = useState([]);
+
+    useEffect(() => {
+        axios.get("http://192.249.18.169:443/theaters/")
+            .then((response) => {
+
+                setTheaterInfo([...response.data]);
+                console.log(response.data);
+            })
+            .catch(function (error) {
+                console.log(error);
+        });
+    }, [ ])
 
     useEffect(() => {
         axios.get("http://192.249.18.169:443/reviews/list/")
@@ -28,7 +58,7 @@ const ReviewMain = () => {
     
 
 
-    useEffect(() => {
+    /*useEffect(() => {
         setComments([
             {
                 uuid: 1,
@@ -53,7 +83,7 @@ const ReviewMain = () => {
             date: new Date().toISOString().slice(0,10),
             content: value
         }]);
-    }
+    }*/
 
     return (
         <div className='ReviewMain'>
@@ -67,8 +97,9 @@ const ReviewMain = () => {
                             {
                                 return(
                                     <div>
-                                        <h2>{ item.title }</h2>
-                                        <p> { item.user_id } / {item.created_at.toString().slice(0,10)}</p>
+                                        <h1 className='reviewTitleText'>{ item.title }</h1>
+                                        <br/>
+                                        <p> 작성자: { item.user_id } / 작성일: {item.created_at.toString().slice(0,10)}</p>
                                     </div>
                                 );
                             }
@@ -84,15 +115,29 @@ const ReviewMain = () => {
                             if(item.id == reviewId.reviewNo)
                             {
                                 return(
-                                    <div>
-                                        <p>{ item.theater }</p>
-                                        <p>{item.seatX}행 {item.seatY}열</p>
-                                    </div>
+                                    <Card elevation={5} className={classes.cardBack}>
+                                        <CardContent>
+                                            {
+                                                theaterInfo.map(th => {
+                                                    if(th.id == item.theater){
+                                                        return(
+                                                            <Typography class="bodycolor" variant="body2">
+                                                                {th.name}
+                                                            </Typography>
+                                                        )
+                                                    }
+                                                })
+                                            }
+                                            <Typography class="bodycolor" variant="body2">
+                                                {item.seatX}행 {item.seatY}열
+                                            </Typography>
+                                            
+                                        </CardContent>
+                                    </Card>
                                 );
                             }
                         })
                     }
-                    
                 </div>
                 
             </div>
@@ -113,7 +158,7 @@ const ReviewMain = () => {
                 
             </div>
             <br/>
-            <div className='ReviewComments'>
+            {/*<div className='ReviewComments'>
                 <h3 className='ReviewCommentsTitle'>Comments</h3>
                 <div>
                     <div className='writeComment'>
@@ -130,7 +175,7 @@ const ReviewMain = () => {
 
                     </ul>
                 </div>
-            </div>
+                    </div>*/}
         </div>
     );
 };
