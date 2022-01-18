@@ -102,7 +102,8 @@ const WriteReview = () => {
                                         </Typography>
                                         
                                     </CardContent>
-                                </Card>)
+                                </Card>
+                            )
                         }
                     })
                 }

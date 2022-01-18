@@ -29,6 +29,19 @@ const ReviewMain = () => {
 
     //const [comments, setComments] = useState([]);
     const [content, setContent] = useState([]);
+    const [theaterInfo, setTheaterInfo] = useState([]);
+
+    useEffect(() => {
+        axios.get("http://192.249.18.169:443/theaters/")
+            .then((response) => {
+
+                setTheaterInfo([...response.data]);
+                console.log(response.data);
+            })
+            .catch(function (error) {
+                console.log(error);
+        });
+    }, [ ])
 
     useEffect(() => {
         axios.get("http://192.249.18.169:443/reviews/list/")
@@ -78,7 +91,7 @@ const ReviewMain = () => {
             <br/>
             <div className='wrapTitle'>
                 <div className='ReviewTitle'>
-                    {/*{
+                    {
                         content.map(item => {
                             if(item.id == reviewId.reviewNo)
                             {
@@ -92,26 +105,29 @@ const ReviewMain = () => {
                             }
                         })
                         
-                    }*/}
-                    <div>
-                        <h1 className='reviewTitleText'>제목</h1>
-                        <br/>
-                        <p> 작성자: 이름 / 작성일: 2022-01-01</p>
-                    </div>
+                    }
                     
                 </div>
 
                 <div className='theaterInfo'>
-                    {/*{
+                    {
                         content.map(item => {
                             if(item.id == reviewId.reviewNo)
                             {
                                 return(
                                     <Card elevation={5} className={classes.cardBack}>
                                         <CardContent>
-                                            <Typography class="bodycolor" variant="body2">
-                                                {item.theater}
-                                            </Typography>
+                                            {
+                                                theaterInfo.map(th => {
+                                                    if(th.id == item.theater){
+                                                        return(
+                                                            <Typography class="bodycolor" variant="body2">
+                                                                {th.name}
+                                                            </Typography>
+                                                        )
+                                                    }
+                                                })
+                                            }
                                             <Typography class="bodycolor" variant="body2">
                                                 {item.seatX}행 {item.seatY}열
                                             </Typography>
@@ -121,22 +137,7 @@ const ReviewMain = () => {
                                 );
                             }
                         })
-                    }*/}
-
-                    <div>
-                        <Card elevation={5} className={classes.cardBack}>
-                            <CardContent>
-                                <Typography class="bodycolor" variant="body2">
-                                    영화관 이름
-                                </Typography>
-                                <Typography class="bodycolor" variant="body2">
-                                    A행 2열
-                                </Typography>
-                                
-                            </CardContent>
-                        </Card>
-                    </div>
-                    
+                    }
                 </div>
                 
             </div>

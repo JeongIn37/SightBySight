@@ -141,7 +141,7 @@ const ReviewList = () => {
                 <Grid container spacing={3}>
                     {
                         reviewList.map(item => {
-                            if(item.theater == "CGV 용산아이파크몰 IMAX관" && item.seatX == seat.theaterRow && item.seatY == seat.theaterColumn){
+                            if(item.theater == seat.theaterId && item.seatX == seat.theaterRow && item.seatY == seat.theaterColumn){
                                 return(
                                     <Grid item key={item.id} xs={12} md={6} lg={4}>
                                         <div>
