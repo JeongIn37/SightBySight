@@ -4,6 +4,8 @@ import SingleReview from './SingleReview';
 import { Header } from '../header/index.js';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import Paper from '@mui/material/Paper';
+import "../css/style.css";
 
 
 const Profile = (props) => {
@@ -13,6 +15,7 @@ const Profile = (props) => {
 
     const [ myReviewList, setMyReviewList ] = useState([]);
 
+   
     useEffect(() => {
         /*setMyReviewList([{
                 uuid: 1,
@@ -31,6 +34,7 @@ const Profile = (props) => {
             console.log(error);
         });
     }, [ ])
+
 
     console.log(myReviewList);
 
@@ -56,29 +60,35 @@ const Profile = (props) => {
     return (
         <div>
             <Header />
+            <div className='background'>
+            
             <h2 className='profileTitle'>My Page</h2>
             <div className='myInfo'>
+            <Paper  className="paperst" elevation={2}>
                 <table className='myInfo-form'>
                     <tbody>
                         <tr>
-                            <td className='profileTableItem'>아이디</td>
-                            <td className='profileTableItem'>{user}</td>
+                            <td className='profileTableItem1'>아이디</td>
+                            <td className='profileTableItem1'>{user}</td>
                         </tr>
                         <tr>
-                            <td className='profileTableItem'>닉네임</td>
+                            <td className='profileTableItem2'>닉네임</td>
                             {
                                 userInfo.map(item => {
                                     if(item.userID == user){
-                                        return(<td className='profileTableItem'>{item.nickname}</td>)
+                                        return(<td className='profileTableItem2'>{item.nickname}</td>)
                                     }
                                 })
                             }
                         </tr>
                     </tbody>
                 </table>
+                </Paper>
+                
             </div>
+
             <div className='myReview'>
-                <h3 className='profileTitle'>내가 쓴 리뷰</h3>
+                <h3 className='profileTitle'>MY REVIEW</h3>
                 <div>
                     <ul id='myReviewList'>
                         {
@@ -89,6 +99,12 @@ const Profile = (props) => {
                     </ul>
                 </div>
             </div>
+            <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+        </div>
+       
         </div>
     );
 
