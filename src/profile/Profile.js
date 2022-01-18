@@ -14,7 +14,7 @@ const Profile = (props) => {
     const [ myReviewList, setMyReviewList ] = useState([]);
 
     useEffect(() => {
-        setMyReviewList([{
+        /*setMyReviewList([{
                 uuid: 1,
                 reviewTitle: "용아맥 제일 앞줄"
             },
@@ -22,7 +22,14 @@ const Profile = (props) => {
                 uuid: 2,
                 reviewTitle: "뒷 줄 별로야"
             },
-        ]);
+        ]);*/
+        axios.get("http://192.249.18.169:443/reviews/mypage/")
+        .then((response) => {
+            setMyReviewList([...response.data]);
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
     }, [ ])
 
     console.log(myReviewList);

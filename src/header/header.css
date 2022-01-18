@@ -7,8 +7,6 @@
 
 .title{
     display: inline-block;
-    float: left;
-    width: 40vw;
     margin-right: 0;
     vertical-align: middle;
     text-align: left;
@@ -17,7 +15,6 @@
 .mybtnwrap{
     display: inline-block;
     float: right;
-    width: 40vw;
     vertical-align: middle;
 }
 
@@ -35,7 +32,7 @@
 
 .titletext{
     margin:0;
-    text-align: left;
+    text-align: center;
     color: white;
     font-family: 'Bebas Neue', cursive;
     font-size: 40px;
