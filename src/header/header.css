@@ -23,17 +23,23 @@
 
 .mybtn{
     float: right;
-    margin-right: 10px;
+    margin-right: 30px;
+    margin-top: 10px;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 25px;
 }
 
-.mybtn1{
-    float: right;
+.mybtn:hover{
+    color: white;
 }
 
 .titletext{
     margin:0;
     text-align: left;
-    color: black;
+    color: white;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 40px;
+    text-decoration-line: none;
 }
 
 .css-2s90m6-MuiAvatar-root{
