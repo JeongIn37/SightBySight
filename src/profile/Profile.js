@@ -97,7 +97,9 @@ const Profile = (props) => {
                                 if(review.user_id == user){
                                     return (
                                         <div className='review'>
-                                            <div className='myReviewItem'>{review.title}</div>
+                                            <Paper  className="rst" elevation={2}>
+                                            {review.title}
+                                            </Paper>
                                         </div>
                                     )
                                 }

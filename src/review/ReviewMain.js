@@ -99,7 +99,7 @@ const ReviewMain = () => {
                                     <div>
                                         <h1 className='reviewTitleText'>{ item.title }</h1>
                                         <br/>
-                                        <p> 작성자: { item.user_id } / 작성일: {item.created_at.toString().slice(0,10)}</p>
+                                        <p className='rtext'> 작성자: { item.user_id } / 작성일: {item.created_at.toString().slice(0,10)}</p>
                                     </div>
                                 );
                             }
@@ -149,7 +149,7 @@ const ReviewMain = () => {
                             {
                                 return(
                                     <div>
-                                        <p>{item.content}</p>
+                                        <p className='btext'>{item.content}</p>
                                     </div>
                                 );
                             }

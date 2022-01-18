@@ -114,7 +114,7 @@ const ReviewList = () => {
                         }
                     </div>
                     <Box component="span" sx={{ fontSize: 22 }}>
-                        의 {seat.theaterRow}행 {seat.theaterColumn}열 리뷰
+                         {seat.theaterRow}행 {seat.theaterColumn}열 리뷰
                     </Box>
                     <Box
                         sx={{

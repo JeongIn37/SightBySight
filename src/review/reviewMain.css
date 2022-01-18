@@ -55,7 +55,6 @@
 .theaterInfo{
     float: right;
     display: inline-block;
-    border: 2px solid;
     border-radius: 5px;
     width: 20vw;
     margin-right: 5vw;
@@ -91,4 +90,16 @@
 
 p {
     color: black;
+}
+
+.reviewTitleText{
+    font-family: 'S-CoreDream-8Heavy';
+}
+.rtext{
+    font-family: 'S-CoreDream-8Heavy';
+}
+
+.btext{
+    font-family: 'NEXON Lv1 Gothic OTF' !important;
+    font-size: 20px;;
 }

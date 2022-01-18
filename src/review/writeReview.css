@@ -11,6 +11,7 @@
     height: 50px;
     width: 50vw;
     border: none;
+    font-family: 'NEXON Lv1 Gothic OTF';
     border-bottom: solid 1px;
     font-size: 22px;
     padding: 10px;
@@ -28,8 +29,6 @@
 .theaterInfo{
     float: right;
     display: inline-block;
-    border: 2px solid;
-    border-radius: 5px;
     width: 20vw;
     margin-right: 5vw;
     margin-top: 10px;
@@ -49,9 +48,16 @@
     width: 90vw;
     border-radius: 5px;
     border-color: #6667AB;
+    font-family: 'NEXON Lv1 Gothic OTF';
+    font-size: 20px;
 }
 
 #reviewSubmit{
     height: 50px;
     width: 50px;
+}
+
+.bodycolor{
+    padding:5px;
+    font-family: 'NEXON Lv1 Gothic OTF';
 }
