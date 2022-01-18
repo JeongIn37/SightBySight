@@ -72,6 +72,6 @@ Sight by Sight는 영화관 시야 후기를 남길 수 있는 사이트입니�
 ||
 
 ## Credit
-- 김민정()
-- 윤정인([])
-- 조민서()
+- 김민정([MIN60](https://github.com/MIN60))
+- 윤정인([JeongIn37](https://github.com/JeongIn37))
+- 조민서([jjminsuh](https://github.com/jjminsuh))
