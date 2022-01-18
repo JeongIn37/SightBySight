@@ -1,10 +1,21 @@
 .profileTitle{
     margin-top: 3vh;
     margin-bottom: 3vh;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 30px;
+    color:#6667AB;
 }
 
-.profileTableItem{
+.profileTableItem1{
+    font-family: 'S-CoreDream-8Heavy';
     padding: 10px;
+    padding-top: 60px;
+    font-size: 20px;
+}
+.profileTableItem2{
+    padding: 10px;
+    font-family: 'S-CoreDream-8Heavy';
+    font-size: 20px;
 }
 
 .myInfo-form{
@@ -22,4 +33,24 @@
     /*margin-left: 3vw;
     margin-right: 3vw;*/
     width: 80vw;
+}
+
+.css-3su884-MuiPaper-root{
+    width: 50%;
+}
+
+.myInfo{
+    width: 900px;
+    align-items: center;
+    margin:auto;
+    padding:10px;
+    
+}
+
+.paperst{
+    height: 200px;
+}
+
+.trstyle{
+    margin-top:100px;
 }
