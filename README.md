@@ -1,4 +1,4 @@
-# Sight by Sight - Frotend
+# Sight by Sight - Frontend
 - Frontend : React
 - Backend 관련 정보는 [여기](https://github.com/JeongIn37/SightBySight)에서 확인해주세요.
 
