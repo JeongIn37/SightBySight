@@ -1,6 +1,6 @@
 # Sight by Sight - Frontend
 - Frontend : React
-- Backend 관련 정보는 [여기](https://github.com/JeongIn37/SightBySight)에서 확인해주세요.
+- Backend 관련 정보는 [여기](https://github.com/JeongIn37/SightBySight-Backend)에서 확인해주세요.
 
 ## Sight by Sight 소개
 Sight by Sight는 영화관 시야 후기를 남길 수 있는 사이트입니다.
